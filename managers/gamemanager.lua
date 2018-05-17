@@ -1,0 +1,3 @@
+function GameManagerNew()
+	gamestate = {}
+end
