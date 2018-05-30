@@ -99,7 +99,7 @@ function init_perlin(seed)
       local max_amp = 0
       local amp = 1
       local value = 0
-      local persistance = .65
+      local persistance = .55
       for n=1,octaves do
 
         value = value+Simplex2D(noisedx+freq*x,
@@ -115,11 +115,13 @@ function init_perlin(seed)
       value *= #terrainmap_colors/2
       value = flr(value+.5)
       value = terrainmap_colors[value]
-      if value == 3 then
+      if value == nil then value = 11 end
+      if value < 7 then
         if rnd(10)<1 then
           value = 33
         end
       end
+      
       add(ligne,{sprite=value})
     end
     add(carte.tiles,ligne)

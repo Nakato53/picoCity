@@ -1,5 +1,5 @@
 function cursorInit()
-	cursor = { x = 42 , y = 42, z = 0, step = 0.2, size = 1, canConstruct = true }
+	cursor = { x = 50 , y = 50, z = 0, step = 0.2, size = 1, canConstruct = true }
 end
 
 function cursorUpdate()
